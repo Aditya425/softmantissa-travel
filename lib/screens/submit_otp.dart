@@ -8,6 +8,7 @@ class SubmitOTP extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -15,9 +16,9 @@ class SubmitOTP extends StatelessWidget {
             SizedBox(
               height: 300,
             ),
-            Text(
-              "Logo"
-            ),
+            Image.asset("images/logo.jpeg",
+            height: 50,
+            width: 50,),
             SizedBox(
               height: 20,
             ),
@@ -42,7 +43,7 @@ class SubmitOTP extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  Navigator.pushNamed(context, HomePage.id);
+                  Navigator.pushNamedAndRemoveUntil(context, HomePage.id, (Route<dynamic> r) => false);
                 },
                 color: Colors.green,
                 shape: RoundedRectangleBorder(
@@ -51,7 +52,7 @@ class SubmitOTP extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 200,
+              height: 100,
             ),
             Container(
               width: double.infinity,

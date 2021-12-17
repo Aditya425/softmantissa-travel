@@ -39,20 +39,25 @@ class RowWidget extends StatelessWidget {
         ),
         Expanded(
           child: Container(
-              height: 18,
+            height: 34,
               decoration: BoxDecoration(
                   border: Border.all(
                       color: Colors.black
                   )
               ),
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    text2,
-                    style: TextStyle(
-                        fontSize: 9
-                    ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        text2,
+                        style: TextStyle(
+                            fontSize: 10
+                        ),
+                      ),
+                    ],
                   )
                 ],
               )

@@ -15,18 +15,17 @@ class GetOtp extends StatelessWidget {
             SizedBox(
               height: 300,
             ),
-            Text(
-              "Image"
-            ),
+            Image.asset("images/logo.jpeg",
+            height: 100,
+            width: 100,
+            fit: BoxFit.fitHeight,),
             SizedBox(
               height: 20,
             ),
             TextField(
+              keyboardType: TextInputType.number,
               decoration: InputDecoration(
                 hintText: "Phone number",
-                hintStyle: TextStyle(
-
-                ),
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
                     color: Colors.black
@@ -62,7 +61,7 @@ class GetOtp extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 200
+              height: 100
             ),
             Container(
               width: double.infinity,
